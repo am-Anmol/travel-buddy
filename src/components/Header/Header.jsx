@@ -8,26 +8,23 @@ import useStyles from './styles';
 const Header = () => {
     const classes = useStyles();
     return(
-        <AppBar position="static">
-      <Toolbar classNam e={classes.toolbar}>
-        <Typography variant="h5" className={classes.title}>
-          Travel Buddy
-        </Typography>
-        <Box display="flex">
-          <Typography variant="h6" className={classes.title}>
-            Explore new places
-          </Typography>
-          {/* <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}> */}
-            <div className={classes.search}>
-              <div className={classes.searchIcon}>
-                <SearchIcon />
+      <AppBar position="static">
+        
+        <Box display="flex" justifyContent="center" alignItems="center" > 
+        <img src="./././logo.png" width="60" height="60" />
+            <Typography variant="h5" className={classes.title} style={{marginLeft: '8px'}}>
+              Explore new places
+            </Typography>
+            {/* <Autocomplete> */}
+              <div className={classes.search}>
+                <div className={classes.searchIcon}>
+                  <SearchIcon />
+                </div>
+                <InputBase placeholder="Search" classes={{ root: classes.inputRoot, input: classes.inputInput }} />
               </div>
-              <InputBase placeholder="Search" classes={{ root: classes.inputRoot, input: classes.inputInput }} />
-            </div>
-          {/* </Autocomplete> */}
-        </Box>
-      </Toolbar>
-    </AppBar>
+            {/* </Autocomplete> */}
+          </Box>
+      </AppBar>
     );
 }
 
